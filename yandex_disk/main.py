@@ -10,8 +10,7 @@ class YaUploader:
     def upload(self, file_path: str) -> None:
         disk = yadisk.YaDisk(token=self.token)
         if os.path.exists(file_path):
-            res = disk.upload(file_path, file_path.split('/')[-1])
-            print(res)
+            disk.upload(file_path, file_path.split('/')[-1])
         else:
             print('No such file')
 
